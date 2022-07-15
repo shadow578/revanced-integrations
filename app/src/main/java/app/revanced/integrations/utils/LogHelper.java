@@ -1,28 +1,40 @@
 package app.revanced.integrations.utils;
 
-import android.util.Log;
-
-import app.revanced.integrations.settings.SettingsEnum;
-
+/**
+ * @deprecated this class is deprecated. use {@link Logging} instead!
+ */
+@Deprecated(since = "0.24.2", forRemoval = true)
 public class LogHelper {
 
-    //ToDo: Get Calling classname using Reflection
-
+    /**
+     * @deprecated this method is deprecated. use {@link Logging#debug(Class, String)} instead!
+     */
+    @Deprecated(since = "0.24.2", forRemoval = true)
     public static void debug(Class clazz, String message) {
-        if (SettingsEnum.DEBUG.getBoolean()) {
-            Log.d("revanced: " + (clazz != null ? clazz.getSimpleName() : ""), message);
-        }
+        Logging.debug(clazz, message);
     }
 
+    /**
+     * @deprecated this method is deprecated. use {@link Logging#error(Class, String, Throwable)} instead!
+     */
+    @Deprecated(since = "0.24.2", forRemoval = true)
     public static void printException(Class clazz, String message, Throwable ex) {
-        Log.e("revanced: " + (clazz != null ? clazz.getSimpleName() : ""), message, ex);
+        Logging.error(clazz, message, ex);
     }
 
+    /**
+     * @deprecated this method is deprecated. use {@link Logging#error(Class, String)} instead!
+     */
+    @Deprecated(since = "0.24.2", forRemoval = true)
     public static void printException(Class clazz, String message) {
-        Log.e("revanced: " + (clazz != null ? clazz.getSimpleName() : ""), message);
+        Logging.error(clazz, message);
     }
 
+    /**
+     * @deprecated this method is deprecated. use {@link Logging#info(Class, String)} instead!
+     */
+    @Deprecated(since = "0.24.2", forRemoval = true)
     public static void info(Class clazz, String message) {
-        Log.i("revanced: " + (clazz != null ? clazz.getSimpleName() : ""), message);
+        Logging.info(clazz, message);
     }
 }
