@@ -16,7 +16,7 @@ import app.revanced.integrations.swipecontrols.controller.gesture.NoPtSSwipeGest
 import app.revanced.integrations.swipecontrols.controller.gesture.SwipeGestureController
 import app.revanced.integrations.swipecontrols.misc.Rectangle
 import app.revanced.integrations.swipecontrols.misc.SwipeControlsOverlay
-import app.revanced.integrations.utils.LogHelper
+import app.revanced.integrations.utils.Logging
 
 /**
  * The main controller for volume and brightness swipe controls
@@ -76,7 +76,7 @@ class SwipeControlsHostLayout(
 
     init {
         // create controllers
-        LogHelper.info(this.javaClass, "initializing swipe controls controllers")
+        Logging.info(this.javaClass, "initializing swipe controls controllers")
         config = SwipeControlsConfigurationProvider(hostActivity)
         gesture = createGestureController()
         audio = createAudioController()

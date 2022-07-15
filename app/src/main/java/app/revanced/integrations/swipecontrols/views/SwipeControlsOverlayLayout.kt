@@ -14,7 +14,7 @@ import android.widget.TextView
 import app.revanced.integrations.swipecontrols.SwipeControlsConfigurationProvider
 import app.revanced.integrations.swipecontrols.misc.SwipeControlsOverlay
 import app.revanced.integrations.swipecontrols.misc.applyDimension
-import app.revanced.integrations.utils.ReVancedUtils
+import app.revanced.integrations.utils.ResourcesHelper
 import kotlin.math.round
 
 /**
@@ -38,10 +38,7 @@ class SwipeControlsOverlayLayout(
     private val normalVolumeIcon: Drawable
 
     private fun getDrawable(name: String, width: Int, height: Int): Drawable {
-        return resources.getDrawable(
-            ReVancedUtils.getResourceIdByName(context, "drawable", name),
-            context.theme
-        ).apply {
+        return ResourcesHelper.Drawables.getDrawable(name)!!.apply {
             setTint(config.overlayForegroundColor)
             setBounds(
                 0,
