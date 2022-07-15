@@ -39,6 +39,10 @@ public class ReVancedUtils {
         return newVideo;
     }
 
+    /**
+     * @deprecated this method is deprecated. use {@link ResourcesHelper#getIdentifier(Context, ResourcesHelper.ResourceType, String)} or a more specialized function in {@link ResourcesHelper} instead!
+     */
+    @Deprecated(since = "0.24.2", forRemoval = true)
     public static Integer getResourceIdByName(Context context, String type, String name) {
         try {
             Resources res = context.getResources();
@@ -57,6 +61,10 @@ public class ReVancedUtils {
         return env;
     }
 
+    /**
+     * @deprecated this method is deprecated. use {@link ResourcesHelper#getIdentifier(Context, ResourcesHelper.ResourceType, String)} or a more specialized function in {@link ResourcesHelper} instead!
+     */
+    @Deprecated(since = "0.24.2", forRemoval = true)
     public static int getIdentifier(String name, String defType) {
         Context context = getContext();
         return context.getResources().getIdentifier(name, defType, context.getPackageName());
