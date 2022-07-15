@@ -53,10 +53,18 @@ public class ReVancedUtils {
         }
     }
 
+    /**
+     * @deprecated this method is deprecated. depend your patch on app.revanced.patches.youtube.misc.playertype.patch.PlayerTypeHookPatch instead!
+     */
+    @Deprecated(since = "0.24.2", forRemoval = true)
     public static void setPlayerType(PlayerType type) {
         env = type;
     }
 
+    /**
+     * @deprecated this method is deprecated. use {@link app.revanced.integrations.shared.PlayerType#getCurrent()} instead!
+     */
+    @Deprecated(since = "0.24.2", forRemoval = true)
     public static PlayerType getPlayerType() {
         return env;
     }

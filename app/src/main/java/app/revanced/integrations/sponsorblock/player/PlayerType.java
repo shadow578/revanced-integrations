@@ -1,5 +1,9 @@
 package app.revanced.integrations.sponsorblock.player;
 
+/**
+ * @deprecated this method is deprecated. use {@link app.revanced.integrations.shared.PlayerType} instead!
+ */
+@Deprecated(since = "0.24.2", forRemoval = true)
 public enum PlayerType {
 
     NONE,
