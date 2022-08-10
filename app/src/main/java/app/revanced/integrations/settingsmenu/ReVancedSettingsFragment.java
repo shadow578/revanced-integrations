@@ -194,7 +194,7 @@ public class ReVancedSettingsFragment extends PreferenceFragment {
     */
 
     private String getPackageName() {
-        Context context = YouTubeTikTokRoot_Application.getAppContext();
+        Context context = ReVancedUtils.getContext();
         if (context == null) {
             LogHelper.printException(ReVancedSettingsFragment.class, "Context is null, returning com.google.android.youtube!");
             return "com.google.android.youtube";

@@ -7,23 +7,13 @@ import android.os.Looper;
 
 import com.google.android.apps.youtube.app.YouTubeTikTokRoot_Application;
 
+import app.revanced.integrations.ReVancedApp;
 import app.revanced.integrations.sponsorblock.player.PlayerType;
 
 public class ReVancedUtils {
 
     private static PlayerType env;
     public static boolean newVideo = false;
-
-    //Used by Integrations patch
-    public static Context context;
-    //Used by Integrations patch
-    public static Context getAppContext() {
-        if (context != null) {
-            return context;
-        }
-        LogHelper.printException(ReVancedUtils.class, "Context is null!");
-        return null;
-    }
 
     public static void setNewVideo(boolean started) {
         LogHelper.debug(ReVancedUtils.class, "New video started: " + started);
@@ -61,7 +51,7 @@ public class ReVancedUtils {
     }
 
     public static Context getContext() {
-        Context context = YouTubeTikTokRoot_Application.getAppContext();
+        Context context = ReVancedApp.getStaticApplicationContext();
         if (context != null) {
             return context;
         } else {
